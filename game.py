@@ -24,7 +24,9 @@ def startGame():
     global userScore
     global computerScore
 
-    userMove = input("\nPlease type your move: Rock, Paper, or Scissors: \n")
+    userMove = input(
+        "\nPlease type your move: Rock, Paper, or Scissors: \n"
+    ).capitalize()
     computerMove = random.choice(["Rock", "Paper", "Scissors"])
 
     countdown(4)
@@ -70,8 +72,8 @@ def startGame():
         if userScore < 4 and computerScore < 4:
             startGame()
         else:
-            print("Best of 7 reached. Game Over")
-            print("Run program to play again")
+            print("\nBest of 7 reached. Game Over")
+            print("\nRun program to play again\n")
             sys.exit()
 
 
