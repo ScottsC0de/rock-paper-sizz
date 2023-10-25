@@ -1,9 +1,22 @@
 import random
+import time
 
 print("Welcome to classic Rock, Paper, Scissors!")
 
 userScore = 0
 computerScore = 0
+
+
+def countdown(game_time):
+    while game_time:
+        mins, secs = divmod(game_time, 60)
+
+        timeformat = "Rock, Paper, Scissors, Shoot! {:2d}:{:2d}\n".format(mins, secs)
+
+        print(timeformat, end="\r")
+
+        time.sleep(0.5)
+        game_time -= 1
 
 
 def startGame():
@@ -12,6 +25,8 @@ def startGame():
 
     userMove = input("\nPlease type your move: Rock, Paper, or Scissors: \n")
     computerMove = random.choice(["Rock", "Paper", "Scissors"])
+
+    countdown(4)
 
     print(f"\nUser: {userMove}")
     print(f"Computer: {computerMove}\n")
