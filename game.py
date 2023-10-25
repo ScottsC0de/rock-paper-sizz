@@ -1,5 +1,6 @@
 import random
 import time
+import sys
 
 print("Welcome to classic Rock, Paper, Scissors!")
 
@@ -64,6 +65,14 @@ def startGame():
 
         print(userScore)
         print(computerScore)
+
+    while True:
+        if userScore < 4 and computerScore < 4:
+            startGame()
+        else:
+            print("Best of 7 reached. Game Over")
+            print("Run program to play again")
+            sys.exit()
 
 
 startGame()
