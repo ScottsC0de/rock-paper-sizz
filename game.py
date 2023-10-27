@@ -1,3 +1,5 @@
+# importing Python modules
+
 import random
 import time
 import sys
